@@ -30,17 +30,36 @@
     <link rel="preload" href="https://fonts.googleapis.com/css2?family=Heebo:wght@400;500;700&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
     <!-- Preload Heebo font files directly for faster rendering -->
     <link rel="preload" as="font" type="font/woff2" crossorigin href="https://fonts.gstatic.com/s/heebo/v27/NGS6v5_NC0k9P9H2TbFhsqMA.woff2">
-    <link rel="preload" as="font" type="font/woff2" crossorigin href="https://fonts.gstatic.com/s/heebo/v27/NGS6v5_NC0k9P9H2T7FhsqMA.woff2">
+    <!-- Preload only the critical font weight for LCP -->
+    <link rel="preload" as="font" type="font/woff2" crossorigin href="https://fonts.gstatic.com/s/heebo/v27/NGS6v5_NC0k9P9H2TbFhsqMA.woff2">
     <noscript>
       <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Heebo:wght@400;500;700&display=swap">
     </noscript>
     <!-- Inline critical CSS for LCP element and container, and use system font for LCP on mobile -->
     <style>
+      /* Reserve space for LCP element to avoid layout shift */
+      :root {
+        --lcp-min-height: 72px;
+      }
       .magazine-section { background: #fff; border-radius: 1.5rem; box-shadow: 0 2px 16px rgba(24,90,157,0.07); padding: 2.5rem 1.5rem; margin-bottom: 2rem; min-height: 320px; }
-      .lead.mx-auto { font-size: 1.25rem; font-weight: 400; color: #212529; max-width: 650px; margin-left: auto; margin-right: auto; font-family: 'Heebo', Arial, sans-serif; min-height: 72px; }
+      .lead.mx-auto {
+        font-size: 1.25rem;
+        font-weight: 400;
+        color: #212529;
+        max-width: 650px;
+        margin-left: auto;
+        margin-right: auto;
+        font-family: 'Heebo', Arial, sans-serif;
+        min-height: var(--lcp-min-height);
+        line-height: 1.6;
+      }
       @media (max-width: 600px) {
         .magazine-section { padding: 1.2rem 0.5rem; min-height: 220px; }
-        .lead.mx-auto { font-size: 1rem; font-family: Arial, Helvetica, sans-serif; min-height: 48px; }
+        .lead.mx-auto {
+          font-size: 1rem;
+          font-family: Arial, Helvetica, sans-serif;
+          min-height: 48px;
+        }
       }
       /* Reserve space for Bootstrap Icons to avoid ::before layout shift */
       .bi {
@@ -49,6 +68,15 @@
         height: 1em;
         vertical-align: -.125em;
         font-size: 1.25em;
+      }
+      /* Add font-display swap for Heebo (for browsers that support it) */
+      @font-face {
+        font-family: 'Heebo';
+        font-style: normal;
+        font-weight: 400;
+        font-display: swap;
+        src: url('https://fonts.gstatic.com/s/heebo/v27/NGS6v5_NC0k9P9H2TbFhsqMA.woff2') format('woff2');
+        unicode-range: U+000-5FF;
       }
     </style>
     <!-- Bootstrap CSS: load as non-blocking for non-critical styles -->
