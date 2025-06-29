@@ -60,9 +60,19 @@
             padding: 1rem 0.5rem;
             box-sizing: border-box;
         }
-        /* Reserve space for hero section to avoid layout shift */
-        .magazine-section.text-center.mb-5 {
-            min-height: 340px; /* Adjust as needed for your content */
+        /* Remove desktop fallback for hero section */
+        /* .magazine-section.text-center.mb-5 {
+            min-height: 340px; 
+        } */
+        /* Fix hero section height and centering for mobile to prevent layout shift */
+        @media (max-width: 600px) {
+            .magazine-section.text-center.mb-5 {
+                min-height: 420px;
+                height: 420px;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+            }
         }
         .display-5, h1.display-5 {
             font-size: 1.5rem;
