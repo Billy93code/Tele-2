@@ -85,10 +85,26 @@
             padding: 1rem 0.5rem;
             box-sizing: border-box;
         }
+        /* Reserve space for hero section to avoid layout shift */
+        .magazine-section.text-center.mb-5 {
+            min-height: 340px; /* Adjust as needed for your content */
+        }
+        /* Reserve space for cities section */
+        .magazine-section:not(.text-center) {
+            min-height: 320px; /* Adjust as needed for your content */
+        }
         .display-5, h1.display-5 {
             font-size: 1.5rem;
-            min-height: 2.5em;
+            min-height: 3.5em; /* Reserve space for heading */
             margin-bottom: 0.5em;
+        }
+        .h4 {
+            font-size: 1.2rem;
+            min-height: 2em; /* Reserve space for subheading */
+        }
+        .h6 {
+            font-size: 1rem;
+            min-height: 1.5em; /* Reserve space for subheading */
         }
         .lead.mx-auto {
             font-size: 1rem;
@@ -99,6 +115,7 @@
             display: flex;
             align-items: center;
         }
+        /* Reserve space for button and icon */
         .btn, .btn .bi {
             min-width: 44px;
             min-height: 44px;
