@@ -30,43 +30,17 @@
     }
     </script>
     <style>
-        /* Critical CSS: Only for header, navbar, hero section, and basic layout */
-        html { scroll-behavior: smooth; }
-        body { font-family: Arial, Helvetica, sans-serif; background: #f8fafc; direction: rtl; margin: 0; padding: 0; }
-        .magazine-header { background: linear-gradient(90deg, #43cea2 0%, #185a9d 100%); color: #fff; }
-        .magazine-header h1 { font-weight: 700; letter-spacing: .03em; }
-        .navbar { position: relative; display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; padding: 0.5rem 1rem; }
-        .navbar .container { display: flex; flex-wrap: inherit; align-items: center; justify-content: space-between; width: 100%; }
-        .navbar-brand { display: inline-block; padding-top: 0.3125rem; padding-bottom: 0.3125rem; margin-right: 1rem; font-size: 1.25rem; line-height: inherit; white-space: nowrap; }
-        .navbar-toggler { width: 40px; height: 40px; padding: 0.25rem 0.5rem; min-width: 40px; min-height: 40px; font-size: 1.25rem; background-color: transparent; border: 1px solid transparent; border-radius: 0.25rem; transition: box-shadow 0.15s ease-in-out; }
-        .navbar-toggler-icon { width: 24px; height: 24px; min-width: 24px; min-height: 24px; display: inline-block; vertical-align: middle; background: no-repeat center center; background-size: 100% 100%; background-image: url("data:image/svg+xml,%3csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3e%3cpath stroke='rgba%280,0,0,0.5%29' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e"); }
-        .collapse.navbar-collapse { display: none; }
-        .collapse.navbar-collapse.show { display: block; }
-        .navbar-nav { display: flex; flex-direction: column; padding-left: 0; margin-bottom: 0; list-style: none; width: 100%; }
-        .nav-item { margin-bottom: 0.5rem; }
-        .nav-link { display: block; padding: 0.5rem 1rem; color: #fff; text-decoration: none; background: none; border: 0; }
-        .nav-link:focus, .nav-link:hover { color: #d1f7e7; text-decoration: underline; }
-        .display-5 { font-size: 2.5rem; font-weight: 300; line-height: 1.2; }
-        .h4 { font-size: 1.5rem; }
-        .h6 { font-size: 1rem; }
-        .lead.mx-auto { font-size: 1.05rem; font-weight: 400; color: #212529; max-width: 100%; margin-left: auto; margin-right: auto; min-height: 60px; line-height: 1.6; display: flex; align-items: center; }
-        .btn { border-radius: 2rem; font-weight: 500; min-height: 44px; font-size: 1rem; padding-right: 2em; padding-left: 2em; display: flex; align-items: center; justify-content: center; }
-        .bi { display: inline-block; width: 1.5em; height: 1.5em; min-width: 1.5em; min-height: 1.5em; vertical-align: -.125em; font-size: 1.25em; line-height: 1.5em; }
-        .footer { background: #185a9d; color: #fff; padding: 1rem 0; text-align: center; border-radius: 1rem 1rem 0 0; margin-top: 1rem; font-size: .95rem; }
-
-        /* Force mobile-only layout */
+        /* Prevent FOUT and layout shift: font and base styles first */
         html, body {
+            font-family: Arial, Helvetica, sans-serif !important;
+            direction: rtl;
+            background: #f8fafc;
+            margin: 0;
+            padding: 0;
             width: 100vw;
             min-width: 320px;
             max-width: 100vw;
-            margin: 0;
-            padding: 0;
             overflow-x: hidden;
-            background: #f8fafc;
-        }
-        body {
-            font-family: Arial, Helvetica, sans-serif;
-            direction: rtl;
         }
         .container {
             width: 100vw;
@@ -79,6 +53,7 @@
             width: 100vw;
             max-width: 100vw;
             min-width: 0;
+            min-height: 320px;
             margin-bottom: 1rem;
             border-radius: 1rem;
             box-shadow: 0 2px 12px rgba(24, 90, 157, 0.07);
@@ -89,7 +64,11 @@
             font-size: 1.5rem;
             min-height: 2.5em;
             margin-bottom: 0.5em;
+            font-weight: 700;
+            letter-spacing: .03em;
         }
+        .h4 { font-size: 1.2rem; min-height: 1.5em; }
+        .h6 { font-size: 1rem; min-height: 1.2em; }
         .lead.mx-auto {
             font-size: 1rem;
             min-height: 60px;
@@ -98,11 +77,19 @@
             line-height: 1.6;
             display: flex;
             align-items: center;
+            color: #212529;
         }
         .btn, .btn .bi {
             min-width: 44px;
             min-height: 44px;
             font-size: 1rem;
+            border-radius: 2rem;
+            font-weight: 500;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding-right: 2em;
+            padding-left: 2em;
         }
         .bi {
             width: 1.5em;
@@ -110,6 +97,14 @@
             min-width: 1.5em;
             min-height: 1.5em;
             font-size: 1.25em;
+            display: inline-block;
+            vertical-align: -.125em;
+            line-height: 1.5em;
+        }
+        .bi::before {
+            display: inline-block;
+            min-width: 1.5em;
+            min-height: 1.5em;
         }
         .footer {
             background: #185a9d;
@@ -137,7 +132,6 @@
             border-radius: 1rem;
         }
         ::-webkit-scrollbar { display: none; }
-        .bi::before { display: inline-block; min-width: 1.5em; min-height: 1.5em; }
     </style>
     <!-- Async load full Bootstrap CSS for rest of page -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.rtl.min.css" media="print" onload="this.media='all'">
