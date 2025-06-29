@@ -28,28 +28,15 @@
       "url": "https://yourdomain.com/"
     }
     </script>
-    <!-- Preconnect for faster font loading -->
     <link rel="preconnect" href="https://fonts.googleapis.com" crossorigin>
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <!-- Preload Google Fonts stylesheet -->
-    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Heebo:wght@400;500;700&display=swap" as="style"
-        onload="this.onload=null;this.rel='stylesheet'">
-    <!-- Preload Heebo font files directly for faster rendering -->
-    <link rel="preload" as="font" type="font/woff2" crossorigin
-        href="https://fonts.gstatic.com/s/heebo/v27/NGS6v5_NC0k9P9H2TbFhsqMA.woff2">
-    <noscript>
-        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Heebo:wght@400;500;700&display=swap">
-    </noscript>
-    <!-- Inline critical CSS, minified for mobile performance -->
     <style>
         :root {
             --lcp-min-height: 60px;
         }
-
         html {
             scroll-behavior: smooth;
         }
-
         body {
             font-family: Arial, Helvetica, sans-serif;
             background: #f8fafc;
@@ -57,7 +44,6 @@
             margin: 0;
             padding: 0;
         }
-
         .magazine-section {
             background: #fff;
             border-radius: 1rem;
@@ -65,9 +51,7 @@
             padding: 1rem 0.5rem;
             margin-bottom: 1rem;
             min-height: 340px;
-            /* Fixed height for main section */
         }
-
         .lead.mx-auto {
             font-size: 1.05rem;
             font-weight: 400;
@@ -75,31 +59,26 @@
             max-width: 100%;
             margin-left: auto;
             margin-right: auto;
-            font-family: inherit;
+            font-family: Arial, Helvetica, sans-serif;
             min-height: var(--lcp-min-height);
-            /* Fixed height for LCP */
             line-height: 1.6;
             display: flex;
             align-items: center;
         }
-
         .magazine-header {
             background: linear-gradient(90deg, #43cea2 0%, #185a9d 100%);
             color: #fff;
         }
-
         .magazine-header h1 {
             font-weight: 700;
             letter-spacing: .03em;
         }
-
         .city-row-card {
             border: none;
             border-radius: 1rem;
             box-shadow: 0 2px 10px rgba(67,206,162,0.10);
             transition: none;
         }
-
         .city-row-card .card-title {
             color: #185a9d;
             font-weight: 600;
@@ -108,7 +87,6 @@
             display: flex;
             align-items: center;
         }
-
         .city-row-card .btn {
             border-radius: 2rem;
             font-weight: 500;
@@ -121,7 +99,6 @@
             align-items: center;
             justify-content: center;
         }
-
         .footer {
             background: #185a9d;
             color: #fff;
@@ -131,11 +108,9 @@
             margin-top: 1rem;
             font-size: .95rem;
         }
-
         #tips-section .list-group-item {
             text-align: center;
         }
-
         .bi {
             display: inline-block;
             width: 1.5em;
@@ -144,15 +119,12 @@
             min-height: 1.5em;
             vertical-align: -.125em;
             font-size: 1.25em;
-            /* fallback for icon font loading */
             line-height: 1.5em;
         }
-
         .btn .bi {
             min-width: 1.5em;
             min-height: 1.5em;
         }
-
         .visually-hidden {
             position: absolute !important;
             width: 1px;
@@ -163,7 +135,6 @@
             clip: rect(0, 0, 0, 0);
             border: 0;
         }
-
         .navbar-toggler {
             width: 40px;
             height: 40px;
@@ -171,15 +142,12 @@
             min-width: 40px;
             min-height: 40px;
         }
-
         .navbar-toggler-icon {
             width: 24px;
             height: 24px;
             min-width: 24px;
             min-height: 24px;
         }
-
-        /* --- Critical Bootstrap Navbar CSS (mobile) --- */
         .navbar {
             position: relative;
             display: flex;
@@ -188,7 +156,6 @@
             justify-content: space-between;
             padding: 0.5rem 1rem;
         }
-
         .navbar .container {
             display: flex;
             flex-wrap: inherit;
@@ -196,7 +163,6 @@
             justify-content: space-between;
             width: 100%;
         }
-
         .navbar-brand {
             display: inline-block;
             padding-top: 0.3125rem;
@@ -206,7 +172,6 @@
             line-height: inherit;
             white-space: nowrap;
         }
-
         .navbar-toggler {
             padding: 0.25rem 0.5rem;
             font-size: 1.25rem;
@@ -216,7 +181,6 @@
             border-radius: 0.25rem;
             transition: box-shadow 0.15s ease-in-out;
         }
-
         .navbar-toggler-icon {
             display: inline-block;
             width: 1.5em;
@@ -227,18 +191,15 @@
             background-size: 100% 100%;
             background-image: url("data:image/svg+xml,%3csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3e%3cpath stroke='rgba%280,0,0,0.5%29' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
         }
-
         .navbar-collapse {
             flex-basis: 100%;
             flex-grow: 1;
             align-items: center;
             display: none;
         }
-
         .navbar-collapse.show {
             display: block;
         }
-
         .navbar-nav {
             display: flex;
             flex-direction: column;
@@ -247,11 +208,9 @@
             list-style: none;
             width: 100%;
         }
-
         .nav-item {
             margin-bottom: 0.5rem;
         }
-
         .nav-link {
             display: block;
             padding: 0.5rem 1rem;
@@ -260,37 +219,20 @@
             background: none;
             border: 0;
         }
-
         .nav-link:focus,
         .nav-link:hover {
             color: #d1f7e7;
             text-decoration: underline;
         }
-        /* --- End Critical Bootstrap Navbar CSS --- */
-
     </style>
-    <!-- Bootstrap CSS: load synchronously for no FOUC/CLS on navbar -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.rtl.min.css">
-    <!-- Bootstrap Icons: defer loading -->
     <link rel="preload" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
         as="style" onload="this.onload=null;this.rel='stylesheet'">
     <noscript>
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
     </noscript>
-    <!-- Remove duplicate or unused CSS below -->
     <style>
-        /* Only keep styles not already inlined above and that are used on the page */
-        /* body { font-family: 'Heebo', Arial, sans-serif; background: #f8fafc; direction: rtl; } */
-        /* .magazine-header { background: linear-gradient(90deg, #43cea2 0%, #185a9d 100%); color: #fff; } */
-        /* .magazine-header h1 { font-weight: 700; letter-spacing: 0.03em; } */
-        /* .city-row-card { border: none; border-radius: 1.2rem; box-shadow: 0 4px 18px rgba(67,206,162,0.10); transition: transform 0.2s, box-shadow 0.2s; } */
-        /* .city-row-card:hover { transform: translateY(-6px) scale(1.03); box-shadow: 0 8px 32px rgba(24,90,157,0.13); } */
-        /* .city-row-card .card-title { color: #185a9d; font-weight: 600; font-size: 1.3rem; } */
-        /* .city-row-card .btn { border-radius: 2rem; font-weight: 500; } */
-        /* .footer { background: #185a9d; color: #fff; padding: 1.2rem 0; text-align: center; border-radius: 1rem 1rem 0 0; margin-top: 2rem; } */
-        /* #tips-section .list-group-item { text-align: center; } */
         @media (max-width: 600px) {
-            /* .city-row-card .card-title { font-size: 1.1rem; } */
         }
     </style>
 </head>
