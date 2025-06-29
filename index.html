@@ -43,7 +43,7 @@
     <!-- Inline critical CSS, minified for mobile performance -->
     <style>
         :root {
-            --lcp-min-height: 48px;
+            --lcp-min-height: 60px;
         }
 
         html {
@@ -60,17 +60,16 @@
 
         .magazine-section {
             background: #fff;
-            border-radius: 1.2rem;
+            border-radius: 1rem;
             box-shadow: 0 2px 12px rgba(24, 90, 157, 0.07);
-            padding: 1.2rem 0.5rem;
-            margin-bottom: 1.2rem;
-            min-height: 30vh;
-            /* Reserve space for LCP and headings */
+            padding: 1rem 0.5rem;
+            margin-bottom: 1rem;
             min-height: 340px;
+            /* Fixed height for main section */
         }
 
         .lead.mx-auto {
-            font-size: 1rem;
+            font-size: 1.05rem;
             font-weight: 400;
             color: #212529;
             max-width: 100%;
@@ -78,8 +77,8 @@
             margin-right: auto;
             font-family: inherit;
             min-height: var(--lcp-min-height);
+            /* Fixed height for LCP */
             line-height: 1.6;
-            /* Reserve space for LCP text */
             display: flex;
             align-items: center;
         }
@@ -98,13 +97,16 @@
             border: none;
             border-radius: 1rem;
             box-shadow: 0 2px 10px rgba(67, 206, 162, 0.10);
-            transition: transform .2s, box-shadow .2s;
+            transition: none;
         }
 
         .city-row-card .card-title {
             color: #185a9d;
             font-weight: 600;
             font-size: 1.1rem;
+            min-height: 28px;
+            display: flex;
+            align-items: center;
         }
 
         .city-row-card .btn {
@@ -113,9 +115,11 @@
             min-height: 44px;
             touch-action: manipulation;
             font-size: 1rem;
-            /* Reserve space for icon */
             padding-right: 2em;
             padding-left: 2em;
+            display: flex;
+            align-items: center;
+            justify-content: center;
         }
 
         .footer {
@@ -124,7 +128,7 @@
             padding: 1rem 0;
             text-align: center;
             border-radius: 1rem 1rem 0 0;
-            margin-top: 1.2rem;
+            margin-top: 1rem;
             font-size: .95rem;
         }
 
@@ -134,18 +138,19 @@
 
         .bi {
             display: inline-block;
-            width: 1.25em;
-            height: 1.25em;
+            width: 1.5em;
+            height: 1.5em;
+            min-width: 1.5em;
+            min-height: 1.5em;
             vertical-align: -.125em;
             font-size: 1.25em;
-            /* Reserve space for icon even before font loads */
-            min-width: 1.25em;
-            min-height: 1.25em;
+            /* fallback for icon font loading */
+            line-height: 1.5em;
         }
 
         .btn .bi {
-            min-width: 1.25em;
-            min-height: 1.25em;
+            min-width: 1.5em;
+            min-height: 1.5em;
         }
 
         .visually-hidden {
@@ -159,7 +164,6 @@
             border: 0;
         }
 
-        /* Reserve space for navbar toggler and icon */
         .navbar-toggler {
             width: 40px;
             height: 40px;
@@ -173,43 +177,6 @@
             height: 24px;
             min-width: 24px;
             min-height: 24px;
-        }
-
-        /* Desktop overrides */
-        @media (min-width: 601px) {
-            body {
-                font-family: 'Heebo', Arial, sans-serif;
-            }
-
-            .magazine-section {
-                border-radius: 1.5rem;
-                padding: 2.5rem 1.5rem;
-                min-height: 320px;
-            }
-
-            .lead.mx-auto {
-                font-size: 1.25rem;
-                min-height: 72px;
-                max-width: 650px;
-                font-family: 'Heebo', Arial, sans-serif;
-            }
-
-            .city-row-card .card-title {
-                font-size: 1.3rem;
-            }
-
-            .footer {
-                font-size: 1rem;
-            }
-        }
-
-        @font-face {
-            font-family: 'Heebo';
-            font-style: normal;
-            font-weight: 400;
-            font-display: optional;
-            src: url('https://fonts.gstatic.com/s/heebo/v27/NGS6v5_NC0k9P9H2TbFhsqMA.woff2') format('woff2');
-            unicode-range: U+000-5FF;
         }
     </style>
     <!-- Bootstrap CSS: load as non-blocking for non-critical styles -->
