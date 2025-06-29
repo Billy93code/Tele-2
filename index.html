@@ -32,7 +32,13 @@
     <style>
         /* Critical CSS: Only for header, navbar, hero section, and basic layout */
         html { scroll-behavior: smooth; }
-        body { font-family: Arial, Helvetica, sans-serif; background: #f8fafc; direction: rtl; margin: 0; padding: 0; }
+        body, html {
+            font-family: Arial, Helvetica, sans-serif !important;
+            direction: rtl;
+            background: #f8fafc;
+            margin: 0;
+            padding: 0;
+        }
         .magazine-header { background: linear-gradient(90deg, #43cea2 0%, #185a9d 100%); color: #fff; }
         .magazine-header h1 { font-weight: 700; letter-spacing: .03em; }
         .navbar { position: relative; display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; padding: 0.5rem 1rem; }
