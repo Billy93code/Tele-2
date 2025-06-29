@@ -53,6 +53,91 @@
         .btn { border-radius: 2rem; font-weight: 500; min-height: 44px; font-size: 1rem; padding-right: 2em; padding-left: 2em; display: flex; align-items: center; justify-content: center; }
         .bi { display: inline-block; width: 1.5em; height: 1.5em; min-width: 1.5em; min-height: 1.5em; vertical-align: -.125em; font-size: 1.25em; line-height: 1.5em; }
         .footer { background: #185a9d; color: #fff; padding: 1rem 0; text-align: center; border-radius: 1rem 1rem 0 0; margin-top: 1rem; font-size: .95rem; }
+
+        /* Force mobile-only layout */
+        html, body {
+            width: 100vw;
+            min-width: 320px;
+            max-width: 100vw;
+            margin: 0;
+            padding: 0;
+            overflow-x: hidden;
+            background: #f8fafc;
+        }
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            direction: rtl;
+        }
+        .container {
+            width: 100vw;
+            max-width: 100vw;
+            padding-left: 0.5rem;
+            padding-right: 0.5rem;
+            box-sizing: border-box;
+        }
+        .magazine-section {
+            width: 100vw;
+            max-width: 100vw;
+            min-width: 0;
+            margin-bottom: 1rem;
+            border-radius: 1rem;
+            box-shadow: 0 2px 12px rgba(24, 90, 157, 0.07);
+            padding: 1rem 0.5rem;
+            box-sizing: border-box;
+        }
+        .display-5, h1.display-5 {
+            font-size: 1.5rem;
+            min-height: 2.5em;
+            margin-bottom: 0.5em;
+        }
+        .lead.mx-auto {
+            font-size: 1rem;
+            min-height: 60px;
+            max-width: 100%;
+            margin: 0 auto;
+            line-height: 1.6;
+            display: flex;
+            align-items: center;
+        }
+        .btn, .btn .bi {
+            min-width: 44px;
+            min-height: 44px;
+            font-size: 1rem;
+        }
+        .bi {
+            width: 1.5em;
+            height: 1.5em;
+            min-width: 1.5em;
+            min-height: 1.5em;
+            font-size: 1.25em;
+        }
+        .footer {
+            background: #185a9d;
+            color: #fff;
+            padding: 1rem 0;
+            text-align: center;
+            border-radius: 1rem 1rem 0 0;
+            margin-top: 1rem;
+            font-size: .95rem;
+        }
+        .row.g-4.justify-content-center {
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+        }
+        .col-12, .col-sm-6, .col-lg-4, .d-flex {
+            width: 100% !important;
+            max-width: 100vw;
+            flex: none !important;
+            display: block !important;
+        }
+        .city-row-card {
+            margin-bottom: 1rem;
+            box-shadow: 0 2px 10px rgba(67,206,162,0.10);
+            border-radius: 1rem;
+        }
+        ::-webkit-scrollbar { display: none; }
+        .bi::before { display: inline-block; min-width: 1.5em; min-height: 1.5em; }
     </style>
     <!-- Async load full Bootstrap CSS for rest of page -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.rtl.min.css" media="print" onload="this.media='all'">
