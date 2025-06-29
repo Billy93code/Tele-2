@@ -5,4 +5,4 @@ Allow: /
 # Disallow: /admin/
 # Disallow: /private/
 
-Sitemap: https://yourdomain.com/sitemap.xml
+Sitemap: https://xn------qpeibxabvcpcbbykdqle3dr7mifo0a.xyz/sitemap.xml
