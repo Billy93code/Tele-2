@@ -6,7 +6,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="מדיניות פרטיות של אתר Telegrass. למד כיצד אנו מגנים על פרטיותך ומידע אישי באתר.">
     <link rel="canonical" href="https://xn------qpeibxabvcpcbbykdqle3dr7mifo0a.xyz/מדיניות-פרטיות">
-    <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.rtl.min.css" media="print" onload="this.media='all'">
     <noscript>
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.rtl.min.css">
@@ -16,10 +15,158 @@
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
     </noscript>
     <style>
-        body { font-family: Arial, Helvetica, sans-serif; background: #f8fafc; direction: rtl; margin: 0; padding: 0; }
-        .container { max-width: 800px; margin: 2rem auto; background: #fff; border-radius: 1rem; padding: 2rem; box-shadow: 0 2px 8px #0001; }
-        h1, h2 { color: #185a9d; }
-        ul { padding-right: 1.5em; }
+        html {
+            scroll-behavior: smooth;
+        }
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            background: #f8fafc;
+            direction: rtl;
+            margin: 0;
+            padding: 0;
+        }
+        .magazine-header {
+            background: linear-gradient(90deg, #43cea2 0%, #185a9d 100%);
+            color: #fff;
+        }
+        .magazine-header h1 {
+            font-weight: 700;
+            letter-spacing: .03em;
+        }
+        .navbar {
+            position: relative;
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            justify-content: space-between;
+            padding: 0.5rem 1rem;
+        }
+        .navbar .container {
+            display: flex;
+            flex-wrap: inherit;
+            align-items: center;
+            justify-content: space-between;
+            width: 100%;
+        }
+        .navbar-brand {
+            display: inline-block;
+            padding-top: 0.3125rem;
+            padding-bottom: 0.3125rem;
+            margin-right: 1rem;
+            font-size: 1.25rem;
+            line-height: inherit;
+            white-space: nowrap;
+        }
+        .navbar-toggler {
+            width: 40px;
+            height: 40px;
+            padding: 0.25rem 0.5rem;
+            min-width: 40px;
+            min-height: 40px;
+            font-size: 1.25rem;
+            background-color: transparent;
+            border: 1px solid transparent;
+            border-radius: 0.25rem;
+            transition: box-shadow 0.15s ease-in-out;
+        }
+        .navbar-toggler-icon {
+            width: 24px;
+            height: 24px;
+            min-width: 24px;
+            min-height: 24px;
+            display: inline-block;
+            vertical-align: middle;
+            background: no-repeat center center;
+            background-size: 100% 100%;
+            background-image: url("data:image/svg+xml,%3csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3e%3cpath stroke='rgba%280,0,0,0.5%29' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+        }
+        .collapse.navbar-collapse {
+            display: none;
+        }
+        .collapse.navbar-collapse.show {
+            display: block;
+        }
+        .navbar-nav {
+            display: flex;
+            flex-direction: column;
+            padding-left: 0;
+            margin-bottom: 0;
+        }
+        .nav-item {
+            margin-bottom: 0.5rem;
+        }
+        .nav-link {
+            display: block;
+            padding: 0.5rem 1rem;
+            color: #fff;
+            text-decoration: none;
+            background: none;
+            border: 0;
+        }
+        .nav-link:focus,
+        .nav-link:hover {
+            color: #d1f7e7;
+            text-decoration: underline;
+        }
+        .display-5 {
+            font-size: 2.5rem;
+            font-weight: 300;
+            line-height: 1.2;
+        }
+        .h4 {
+            font-size: 1.5rem;
+        }
+        .h6 {
+            font-size: 1rem;
+        }
+        .lead.mx-auto {
+            font-size: 1.05rem;
+            font-weight: 400;
+            color: #212529;
+            max-width: 100%;
+            margin-left: auto;
+            margin-right: auto;
+            min-height: 60px;
+            line-height: 1.6;
+            display: flex;
+            align-items: center;
+        }
+        .btn {
+            border-radius: 2rem;
+            font-weight: 500;
+            min-height: 44px;
+            font-size: 1rem;
+            padding-right: 2em;
+            padding-left: 2em;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .bi {
+            display: inline-block;
+            width: 1.5em;
+            height: 1.5em;
+            min-width: 1.5em;
+            min-height: 1.5em;
+            vertical-align: -.125em;
+            font-size: 1.25em;
+            line-height: 1.5em;
+        }
+        .footer {
+            background: #185a9d;
+            color: #fff;
+            padding: 1rem 0;
+            text-align: center;
+            border-radius: 1rem 1rem 0 0;
+            margin-top: 1rem;
+            font-size: .95rem;
+        }
+        .city-hero {
+            background: #e3f6f2;
+            border-radius: 1rem;
+            padding: 2rem 1rem;
+            margin-bottom: 2rem;
+        }
     </style>
 </head>
 <body>
@@ -40,28 +187,30 @@
             </div>
         </div>
     </nav>
-    <div class="container">
-        <h1>מדיניות פרטיות</h1>
-        <p>הפרטיות שלך חשובה לנו. במסמך זה תוכל ללמוד כיצד אנו אוספים, משתמשים, שומרים ומגנים על המידע שלך באתר Telegrass.</p>
-        <h2>איזה מידע אנו אוספים?</h2>
-        <ul>
-            <li>איננו אוספים מידע אישי מזהה ללא הסכמתך.</li>
-            <li>ייתכן ואנו אוספים נתונים אנונימיים לצורכי סטטטיסטיקה ושיפור האתר (כגון Google Analytics).</li>
+    <!-- Hero Section for Privacy Policy -->
+    <section class="container city-hero text-center mb-5">
+        <h1 class="display-5 mb-3">מדיניות פרטיות</h1>
+        <h2 class="h4 text-success mb-2">הפרטיות שלך חשובה לנו</h2>
+        <h3 class="h6 text-primary mb-3">קרא בעיון את המדיניות לפני השימוש באתר</h3>
+        <p class="lead mx-auto" style="max-width:650px;">
+            במסמך זה תוכל ללמוד כיצד אנו אוספים, משתמשים, שומרים ומגנים על המידע שלך באתר Telegrass.
+        </p>
+    </section>
+    <section class="container magazine-section" dir="rtl">
+        <h2 class="mb-4 text-primary text-center"><i class="bi bi-shield-lock"></i> תקציר מדיניות הפרטיות</h2>
+        <ul class="list-group list-group-flush mx-auto text-center" style="max-width:700px;" dir="rtl">
+            <li class="list-group-item" dir="rtl"><strong>1. איזה מידע אנו אוספים?</strong> איננו אוספים מידע אישי מזהה ללא הסכמתך. ייתכן ואנו אוספים נתונים אנונימיים לצורכי סטטיסטיקה ושיפור האתר (כגון Google Analytics).</li>
+            <li class="list-group-item" dir="rtl"><strong>2. כיצד אנו משתמשים במידע?</strong> שיפור חוויית המשתמש באתר. ניתוח נתוני גלישה לצורך שיפור התוכן והשירותים.</li>
+            <li class="list-group-item" dir="rtl"><strong>3. הגנה על המידע:</strong> אנו נוקטים באמצעים סבירים כדי להגן על המידע שלך מפני גישה לא מורשית.</li>
+            <li class="list-group-item" dir="rtl"><strong>4. שיתוף מידע עם צדדים שלישיים:</strong> איננו משתפים מידע אישי עם צדדים שלישיים, למעט במקרים בהם נדרש על פי חוק.</li>
+            <li class="list-group-item" dir="rtl"><strong>5. שינויים במדיניות:</strong> אנו שומרים לעצמנו את הזכות לעדכן מדיניות זו מעת לעת. עדכון אחרון: יוני 2025.</li>
+            <li class="list-group-item" dir="rtl"><strong>6. יצירת קשר:</strong> לשאלות או בקשות בנוגע למדיניות פרטיות, ניתן לפנות אלינו בדוא"ל: info@telegrass.xyz</li>
         </ul>
-        <h2>כיצד אנו משתמשים במידע?</h2>
-        <ul>
-            <li>שיפור חוויית המשתמש באתר.</li>
-            <li>ניתוח נתוני גלישה לצורך שיפור התוכן והשירותים.</li>
-        </ul>
-        <h2>הגנה על המידע</h2>
-        <p>אנו נוקטים באמצעים סבירים כדי להגן על המידע שלך מפני גישה לא מורשית.</p>
-        <h2>שיתוף מידע עם צדדים שלישיים</h2>
-        <p>איננו משתפים מידע אישי עם צדדים שלישיים, למעט במקרים בהם נדרש על פי חוק.</p>
-        <h2>שינויים במדיניות</h2>
-        <p>אנו שומרים לעצמנו את הזכות לעדכן מדיניות זו מעת לעת. עדכון אחרון: יוני 2025.</p>
-        <h2>יצירת קשר</h2>
-        <p>לשאלות או בקשות בנוגע למדיניות פרטיות, ניתן לפנות אלינו בדוא"ל: info@telegrass.xyz</p>
-    </div>
+        <div class="text-center mt-4">
+            <a href="index" class="btn btn-link">חזרה לעמוד הראשי</a>
+            <a href="faq" class="btn btn-link">שאלות נפוצות (FAQ)</a>
+        </div>
+    </section>
     <!-- Footer -->
     <footer class="footer" style="background: #185a9d; color: #fff; padding: 1rem 0; text-align: center; border-radius: 1rem 1rem 0 0; margin-top: 1rem; font-size: .95rem;">
         <div class="container">
