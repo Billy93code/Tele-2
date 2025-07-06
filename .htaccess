@@ -53,6 +53,14 @@ AddDefaultCharset UTF-8
 RewriteCond %{REQUEST_FILENAME} !-d
 RewriteRule ^(.+)/$ /$1 [R=301,L]
 
+
+# Remove .html extension from URLs for all files listed in sitemap.xml
+# (Disabled for GitHub Pages compatibility)
+
+# Optional: Redirect .html URLs to extensionless for SEO (uncomment if you want this)
+# RewriteCond %{THE_REQUEST} \s/+(.+?)\.html[\s?]
+# RewriteRule ^ %1 [R=301,L]
+
 # Block access to hidden files and directories
 RedirectMatch 404 /\..*
 
