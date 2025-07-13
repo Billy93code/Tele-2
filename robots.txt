@@ -1,5 +1,12 @@
+
 User-agent: *
 Allow: /
+
+# Disallow crawling of www and http versions (enforce canonical domain)
+Disallow: http://www.טלגרם-טלגראס-כיוונים-קישורים.xyz/
+Disallow: https://www.טלגרם-טלגראס-כיוונים-קישורים.xyz/
+Disallow: http://xn------qpeibxabvcpcbbykdqle3dr7mifo0a.xyz/
+
 
 # Disallow sensitive or non-public paths (uncomment if needed)
 # Disallow: /admin/

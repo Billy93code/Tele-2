@@ -1,84 +1,16 @@
-# .htaccess for SEO and Security (for Apache servers)
+# RewriteEngine On
 
-ErrorDocument 404 /404.html
+# # Redirect www to non-www
+# RewriteCond %{HTTP_HOST} ^www\.(.+)$ [NC]
+# RewriteRule ^ https://%1%{REQUEST_URI} [L,NE,R=301]
 
-# Enable Rewrite Engine
-RewriteEngine On
+# # Redirect http to https
+# RewriteCond %{HTTPS} off
+# RewriteRule ^ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
 
-# Redirect www to non-www (canonical domain)
-RewriteCond %{HTTP_HOST} ^www\.(.+)$ [NC]
-RewriteRule ^ https://%1%{REQUEST_URI} [L,NE,R=301]
-
-# Force HTTPS
-RewriteCond %{HTTPS} off
-RewriteRule ^ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
-
-# Set default charset
-AddDefaultCharset UTF-8
-
-# Set caching for static assets
-<IfModule mod_expires.c>
-  ExpiresActive On
-  ExpiresByType image/jpg "access plus 1 year"
-  ExpiresByType image/jpeg "access plus 1 year"
-  ExpiresByType image/gif "access plus 1 year"
-  ExpiresByType image/png "access plus 1 year"
-  ExpiresByType image/svg+xml "access plus 1 year"
-  ExpiresByType text/css "access plus 1 month"
-  ExpiresByType application/javascript "access plus 1 month"
-  ExpiresByType application/x-javascript "access plus 1 month"
-  ExpiresByType text/javascript "access plus 1 month"
-  ExpiresByType text/html "access plus 1 hour"
-  ExpiresDefault "access plus 1 month"
-</IfModule>
-
-# Gzip Compression
-<IfModule mod_deflate.c>
-  AddOutputFilterByType DEFLATE text/html text/plain text/xml text/css text/javascript application/javascript application/json
-</IfModule>
-
-# Security Headers
-<IfModule mod_headers.c>
-  Header set X-Content-Type-Options "nosniff"
-  Header set X-Frame-Options "SAMEORIGIN"
-  Header set X-XSS-Protection "1; mode=block"
-  Header set Referrer-Policy "strict-origin-when-cross-origin"
-  Header set Strict-Transport-Security "max-age=63072000; includeSubDomains; preload"
-  Header set Cross-Origin-Opener-Policy "same-origin"
-  Header set Cross-Origin-Embedder-Policy "require-corp"
-  Header set Content-Security-Policy "default-src 'self'; img-src 'self' data: https:; script-src 'self' https://cdn.jsdelivr.net; style-src 'self' 'unsafe-inline' https://cdn.jsdelivr.net; font-src 'self' https://cdn.jsdelivr.net data:; object-src 'none'; base-uri 'self'; form-action 'self';"
-</IfModule>
-
-# Remove trailing slash (optional, for canonical URLs)
-RewriteCond %{REQUEST_FILENAME} !-d
-RewriteRule ^(.+)/$ /$1 [R=301,L]
-
-
-# Remove .html extension from URLs for all files listed in sitemap.xml
-# (Disabled for GitHub Pages compatibility)
-
-# Optional: Redirect .html URLs to extensionless for SEO (uncomment if you want this)
-# RewriteCond %{THE_REQUEST} \s/+(.+?)\.html[\s?]
-# RewriteRule ^ %1 [R=301,L]
-
-# Block access to hidden files and directories
-RedirectMatch 404 /\..*
-
-# Sitemap (update for all main pages)
-Redirect 301 /sitemap.xml https://xn------qpeibxabvcpcbbykdqle3dr7mifo0a.xyz/sitemap.xml
-
-# robots.txt (let Googlebot and others crawl)
-<Files "robots.txt">
-  <IfModule mod_headers.c>
-    Header set Content-Type "text/plain; charset=UTF-8"
-  </IfModule>
-</Files>
-
-# FAQ page SEO (allow crawling)
-<Files "faq.html">
-  <IfModule mod_headers.c>
-    Header set X-Robots-Tag "index, follow"
-  </IfModule>
-</Files>
-
-# End of .htaccess
+# # Redirect alternate Hebrew domain to main domain
+# RewriteCond %{HTTP_HOST} ^(www\.)?טלגרם-טלגראס-כיוונים-קישורים\.xyz$ [NC,OR]
+# RewriteCond %{HTTP_HOST} ^(www\.)?xn------qpeibxabvcpcbbykdqle3dr7mifo0a\.xyz$ [NC]
+# RewriteCond %{HTTPS} on
+# RewriteCond %{HTTP_HOST} !^xn------qpeibxabvcpcbbykdqle3dr7mifo0a\.xyz$ [NC]
+# RewriteRule ^ https://xn------qpeibxabvcpcbbykdqle3dr7mifo0a.xyz%{REQUEST_URI} [L,R=301]
