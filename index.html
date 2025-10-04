@@ -9,7 +9,7 @@
     <meta name="description"
         content="כיוונים בטלגראס, כיוונים טלגראס, כיוונים טלגרם, להתארגן בטלגרם - כל מה שצריך לדעת על מציאת כיוון בטלגרם בצורה בטוחה, דיסקרטית ומהירה. מדריך, טיפים, קבוצות ועדכונים לכל עיר: תל אביב, רמת גן, ראשון לציון ועוד.">
     <meta name="keywords"
-        content="כיוונים בטלגראס, כיוונים טלגראס, כיוונים טלגרם, להתארגן בטלגרם, טלגראס תל אביב, טלגראס רמת גן, טלגראס ראשון לציון, טלגראס בת ים, טלגראס בני ברק, טלגראס גבעתיים, טלגראס חולון, טלגראס הרצליה, טלגראס רמת השרון, טלגראס אור יהודה, טלגראס קריית אונו, טלגראס גבעת שמואל, טלגראס יהוד, טלגראס אזור, טלגראס תל השומר, טלגראס שוהם, טלגראס סביון, טלגראס אלעד, טלגראס כפר שמריהו, טלגרם, קנאביס, קבוצות טלגראס, טיפים טלגראס, מדריך טלגראס, cannabis, telegrass, directions">
+        content="כיוונים בטלגראס, כיוונים בטלגראס, כיוונים טלגרם, להתארגן בטלגרם, טלגראס תל אביב, טלגראס רמת גן, טלגראס ראשון לציון, טלגראס בת ים, טלגראס בני ברק, טלגראס גבעתיים, טלגראס חולון, טלגראס הרצליה, טלגראס רמת השרון, טלגראס אור יהודה, טלגראס קריית אונו, טלגראס גבעת שמואל, טלגראס יהוד, טלגראס אזור, טלגראס תל השומר, טלגראס שוהם, טלגראס סביון, טלגראס אלעד, טלגראס כפר שמריהו, טלגרם, קנאביס, קבוצות טלגראס, טיפים טלגראס, מדריך טלגראס, cannabis, telegrass, directions">
     <meta property="og:title"
         content="כיוונים בטלגראס | כיוונים טלגראס | כיוונים טלגרם | להתארגן בטלגרם - טלגראס כיוונים">
     <meta property="og:description"
@@ -245,9 +245,26 @@
         }
 
         /* hide label on very small screens to keep a compact icon */
+        /* small screens: keep label visible but scale everything down for compactness */
         @media (max-width:420px) {
-            .telegram-fab { padding: 0 10px; }
-            .telegram-fab .fab-label { display: none; }
+            .telegram-fab {
+                padding: 0 10px;
+                height: 52px;
+                gap: 8px;
+                font-weight: 600;
+            }
+            .telegram-fab .tg-icon {
+                width: 28px;
+                height: 28px;
+                flex: 0 0 28px;
+            }
+            .telegram-fab .fab-label {
+                display: inline-block;
+                font-size: 0.85rem;
+                line-height: 1;
+                white-space: nowrap;
+                padding-right: 4px;
+            }
         }
     </style>
     <!-- Async load full Bootstrap CSS for rest of page -->
@@ -597,9 +614,8 @@
     <a href="https://bit.ly/Telegrass-kivunim" class="telegram-fab" target="_blank" rel="noopener noreferrer" aria-label="הצטרפות לטלגרם - Telegrass" title="הצטרפו בטלגרם — Telegrass">
         <!-- Project telegram logo file -->
         <img src="Telegram_2019_Logo.svg.png" class="tg-icon" alt="Telegram" aria-hidden="true" />
-         <span class="fab-label">שלחו הודעה</span>
-     </span>
-     </a>
+        <span class="fab-label">שלחו הודעה</span>
+    </a>
     <!-- Bootstrap JS (for navbar toggler) -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" crossorigin="anonymous"
         defer></script>
