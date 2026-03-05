@@ -1,0 +1,21 @@
+{
+  "name": "טלגראס כיוונים",
+  "short_name": "טלגראס",
+  "description": "כיוונים בטלגראס - המדריך המלא למציאת כיוונים בטלגראס ובטלגרם בצורה בטוחה ודיסקרטית",
+  "start_url": "/",
+  "display": "standalone",
+  "dir": "rtl",
+  "lang": "he",
+  "background_color": "#f8fafc",
+  "theme_color": "#185a9d",
+  "orientation": "portrait-primary",
+  "categories": ["news", "lifestyle"],
+  "icons": [
+    {
+      "src": "favicon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    }
+  ]
+}

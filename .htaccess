@@ -1,0 +1,16 @@
+# RewriteEngine On
+
+# # Redirect www to non-www
+# RewriteCond %{HTTP_HOST} ^www\.(.+)$ [NC]
+# RewriteRule ^ https://%1%{REQUEST_URI} [L,NE,R=301]
+
+# # Redirect http to https
+# RewriteCond %{HTTPS} off
+# RewriteRule ^ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
+
+# # Redirect alternate Hebrew domain to main domain
+# RewriteCond %{HTTP_HOST} ^(www\.)?טלגרם-טלגראס-כיוונים-קישורים\.xyz$ [NC,OR]
+# RewriteCond %{HTTP_HOST} ^(www\.)?xn------qpeibxabvcpcbbykdqle3dr7mifo0a\.xyz$ [NC]
+# RewriteCond %{HTTPS} on
+# RewriteCond %{HTTP_HOST} !^xn------qpeibxabvcpcbbykdqle3dr7mifo0a\.xyz$ [NC]
+# RewriteRule ^ https://xn------qpeibxabvcpcbbykdqle3dr7mifo0a.xyz%{REQUEST_URI} [L,R=301]

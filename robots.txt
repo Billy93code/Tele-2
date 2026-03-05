@@ -1,0 +1,84 @@
+
+# ══════════════════════════════════════════════════════
+# robots.txt — טלגראס כיוונים
+# Updated: 2026-03-05
+# ══════════════════════════════════════════════════════
+
+# Allow all search engines
+User-agent: *
+Allow: /
+
+# Disallow crawling of www and http versions (enforce canonical domain)
+Disallow: http://www.טלגרם-טלגראס-כיוונים-קישורים.xyz/
+Disallow: https://www.טלגרם-טלגראס-כיוונים-קישורים.xyz/
+Disallow: http://xn------qpeibxabvcpcbbykdqle3dr7mifo0a.xyz/
+
+# ── Google Search / AI Overview ──
+User-agent: Googlebot
+Allow: /
+
+User-agent: Googlebot-Image
+Allow: /
+
+User-agent: Google-Extended
+Allow: /
+
+# ── Bing / Microsoft AI (Copilot) ──
+User-agent: Bingbot
+Allow: /
+
+# ── OpenAI GPTBot — allow for AI discovery ──
+User-agent: GPTBot
+Allow: /
+
+# ── ChatGPT user browsing ──
+User-agent: ChatGPT-User
+Allow: /
+
+# ── Anthropic Claude ──
+User-agent: anthropic-ai
+Allow: /
+User-agent: ClaudeBot
+Allow: /
+
+# ── Common Crawl (used by many AI models) ──
+User-agent: CCBot
+Allow: /
+
+# ── Perplexity AI ──
+User-agent: PerplexityBot
+Allow: /
+
+# ── Meta / Facebook ──
+User-agent: FacebookExternalHit
+Allow: /
+User-agent: facebookexternalhit
+Allow: /
+
+# ── Twitter ──
+User-agent: Twitterbot
+Allow: /
+
+# ── Telegram Link Preview ──
+User-agent: TelegramBot
+Allow: /
+
+# ── Apple (Siri / Spotlight) ──
+User-agent: Applebot
+Allow: /
+
+# ── Yandex ──
+User-agent: YandexBot
+Allow: /
+
+# ── DuckDuckGo ──
+User-agent: DuckDuckBot
+Allow: /
+
+# Sitemap location
+Sitemap: https://xn------qpeibxabvcpcbbykdqle3dr7mifo0a.xyz/sitemap.xml
+
+# LLMs.txt — AI model content discovery
+# https://llmstxt.org/
+# llms.txt: https://xn------qpeibxabvcpcbbykdqle3dr7mifo0a.xyz/llms.txt
+# llms-full.txt: https://xn------qpeibxabvcpcbbykdqle3dr7mifo0a.xyz/llms-full.txt

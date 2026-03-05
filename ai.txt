@@ -1,0 +1,18 @@
+# ai.txt — AI Crawler Policy for טלגראס כיוונים
+# This file provides guidance for AI models and crawlers.
+
+User-agent: *
+Allow: /
+
+# Site Information
+Name: טלגראס כיוונים
+URL: https://xn------qpeibxabvcpcbbykdqle3dr7mifo0a.xyz/
+Language: he (Hebrew)
+Type: Informational article site
+Description: כיוונים בטלגראס - המדריך המלא למציאת כיוונים בטלגראס ובטלגרם בצורה בטוחה ודיסקרטית
+Keywords: כיוונים, טלגראס, טלגרס, טלגרם, קנאביס, וויד, weed, גראס, להתארגן בישראל, להתארגן בטלגרם, cannabis, marijuana, קנאביס רפואי, telegrass, directions
+
+# Content Index
+LLMs-txt: https://xn------qpeibxabvcpcbbykdqle3dr7mifo0a.xyz/llms.txt
+LLMs-full-txt: https://xn------qpeibxabvcpcbbykdqle3dr7mifo0a.xyz/llms-full.txt
+Sitemap: https://xn------qpeibxabvcpcbbykdqle3dr7mifo0a.xyz/sitemap.xml

@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#43cea2"/>
+      <stop offset="100%" stop-color="#185a9d"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="630" fill="url(#bg)" rx="0"/>
+  <!-- Telegram-style paper plane icon -->
+  <g transform="translate(500,100) scale(3.5)" fill="#fff" opacity="0.95">
+    <path d="M22.05 1.577c-.393-.016-.784.08-1.117.235-2.275 1.01-18.97 8.46-20.358 9.078-.372.164-.86.41-.86.86 0 .314.203.577.51.743l5.585 2.525c.26.116.575.15.86.04l12.437-7.77c.39-.26.81.173.47.48l-9.823 8.91c-.26.235-.372.59-.313.94l.937 6.21c.116.72.98.94 1.41.392l3.303-3.47 5.712 4.36c.572.44 1.39.166 1.56-.535l4.437-20.97c.25-1.178-.737-2.07-1.75-2.028z"/>
+  </g>
+  <!-- Hebrew text -->
+  <text x="600" y="420" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="72" font-weight="700" fill="#fff" direction="rtl">טלגראס כיוונים</text>
+  <text x="600" y="500" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="36" fill="#ffffffcc" direction="rtl">המדריך המלא לכיוונים בטלגרם</text>
+  <!-- Bottom accent line -->
+  <rect x="400" y="550" width="400" height="4" rx="2" fill="#fff" opacity="0.6"/>
+</svg>
